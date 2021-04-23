@@ -493,26 +493,39 @@
         <!--Events-->
         <scene sceneID="Wn0-x7-jG0">
             <objects>
-                <viewController id="G6f-EX-MzI" sceneMemberID="viewController">
+                <viewController id="G6f-EX-MzI" customClass="EventsViewController" customModule="EducationalAdminSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EFM-qn-dhS">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LW5-kH-FC4">
-                                <rect key="frame" x="148" y="448" width="132" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LEZ-PC-DwD">
+                                <rect key="frame" x="0.0" y="88" width="428" height="804"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventsCell" rowHeight="70" id="0bb-AQ-cZe">
+                                        <rect key="frame" x="0.0" y="28" width="428" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0bb-AQ-cZe" id="z52-Pl-f3E">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VaA-IV-zcB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LW5-kH-FC4" firstAttribute="centerX" secondItem="EFM-qn-dhS" secondAttribute="centerX" id="6Fl-Ib-5jV"/>
-                            <constraint firstItem="LW5-kH-FC4" firstAttribute="centerY" secondItem="EFM-qn-dhS" secondAttribute="centerY" id="iEQ-xs-OWm"/>
+                            <constraint firstItem="VaA-IV-zcB" firstAttribute="trailing" secondItem="LEZ-PC-DwD" secondAttribute="trailing" id="UWS-Lr-a1G"/>
+                            <constraint firstItem="VaA-IV-zcB" firstAttribute="bottom" secondItem="LEZ-PC-DwD" secondAttribute="bottom" id="igM-ah-NRx"/>
+                            <constraint firstItem="LEZ-PC-DwD" firstAttribute="leading" secondItem="VaA-IV-zcB" secondAttribute="leading" id="sDG-pd-NEv"/>
+                            <constraint firstItem="LEZ-PC-DwD" firstAttribute="top" secondItem="VaA-IV-zcB" secondAttribute="top" id="sfa-uL-uQm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="Maz-Xv-mfc"/>
+                    <connections>
+                        <outlet property="tblEvents" destination="LEZ-PC-DwD" id="Kzn-un-qcx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUc-5G-Eci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

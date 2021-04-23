@@ -46,6 +46,7 @@ class GradeViewController: UIViewController, UITableViewDelegate, UITableViewDat
             SwiftSpinner.hide()
             if response.error != nil {
                 print("Error in getting grades")
+                return
             }
             guard let data = response.data else {return}
             let gradeJson: [JSON] = JSON(data).arrayValue
