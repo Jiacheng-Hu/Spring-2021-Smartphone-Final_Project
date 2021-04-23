@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1A669D26318B6400874965 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A669C26318B6400874965 /* EventsModel.swift */; };
+		8D1A66A026318B7600874965 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A669F26318B7600874965 /* CourseModel.swift */; };
+		8D1A66A326318B8300874965 /* GradeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A66A226318B8300874965 /* GradeModel.swift */; };
+		8D1A66A72631D7AF00874965 /* GradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A66A62631D7AF00874965 /* GradeViewController.swift */; };
+		8D1A66AB2631D7C500874965 /* GradeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A66A92631D7C500874965 /* GradeTableViewCell.swift */; };
+		8D1A66AC2631D7C500874965 /* GradeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1A66AA2631D7C500874965 /* GradeTableViewCell.xib */; };
 		8D2C5FEA26307803003F60F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C5FE926307803003F60F7 /* AppDelegate.swift */; };
 		8D2C5FEC26307803003F60F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C5FEB26307803003F60F7 /* SceneDelegate.swift */; };
 		8D2C5FEE26307803003F60F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C5FED26307803003F60F7 /* ViewController.swift */; };
@@ -18,11 +24,16 @@
 		8D2C602326307C82003F60F7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C602226307C82003F60F7 /* DashboardViewController.swift */; };
 		8D2C602626308048003F60F7 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C602526308048003F60F7 /* KeychainService.swift */; };
 		8D7DA261263168A0001F25B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7DA260263168A0001F25B3 /* Constants.swift */; };
-		8D7DA26526316BEC001F25B3 /* GradeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7DA26426316BEC001F25B3 /* GradeTableViewController.swift */; };
 		D3EA16BB83EECDDCD0F66D59 /* Pods_EducationalAdminSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FDAEA13004A003F0923C185 /* Pods_EducationalAdminSystem.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D1A669C26318B6400874965 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
+		8D1A669F26318B7600874965 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
+		8D1A66A226318B8300874965 /* GradeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeModel.swift; sourceTree = "<group>"; };
+		8D1A66A62631D7AF00874965 /* GradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeViewController.swift; sourceTree = "<group>"; };
+		8D1A66A92631D7C500874965 /* GradeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeTableViewCell.swift; sourceTree = "<group>"; };
+		8D1A66AA2631D7C500874965 /* GradeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeTableViewCell.xib; sourceTree = "<group>"; };
 		8D2C5FE626307803003F60F7 /* EducationalAdminSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EducationalAdminSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2C5FE926307803003F60F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D2C5FEB26307803003F60F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +47,6 @@
 		8D2C602226307C82003F60F7 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8D2C602526308048003F60F7 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		8D7DA260263168A0001F25B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8D7DA26426316BEC001F25B3 /* GradeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeTableViewController.swift; sourceTree = "<group>"; };
 		9FDAEA13004A003F0923C185 /* Pods_EducationalAdminSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EducationalAdminSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84BD8D4F66AC1E441D61974 /* Pods-EducationalAdminSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationalAdminSystem.release.xcconfig"; path = "Target Support Files/Pods-EducationalAdminSystem/Pods-EducationalAdminSystem.release.xcconfig"; sourceTree = "<group>"; };
 		E0E34052C1C44E3E74553BE0 /* Pods-EducationalAdminSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationalAdminSystem.debug.xcconfig"; path = "Target Support Files/Pods-EducationalAdminSystem/Pods-EducationalAdminSystem.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,9 +81,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8D1A669626318B1E00874965 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D1A669C26318B6400874965 /* EventsModel.swift */,
+				8D1A669F26318B7600874965 /* CourseModel.swift */,
+				8D1A66A226318B8300874965 /* GradeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8D2C5FDD26307803003F60F7 = {
 			isa = PBXGroup;
 			children = (
+				8D1A669626318B1E00874965 /* Model */,
 				8D7DA25F26316892001F25B3 /* Service */,
 				8D2C601E26307B08003F60F7 /* Utilities */,
 				8D2C5FE826307803003F60F7 /* EducationalAdminSystem */,
@@ -103,7 +124,9 @@
 				8D2C5FF726307805003F60F7 /* Info.plist */,
 				8D2C5FFF2630787D003F60F7 /* GoogleService-Info.plist */,
 				8D2C602226307C82003F60F7 /* DashboardViewController.swift */,
-				8D7DA26426316BEC001F25B3 /* GradeTableViewController.swift */,
+				8D1A66A62631D7AF00874965 /* GradeViewController.swift */,
+				8D1A66A92631D7C500874965 /* GradeTableViewCell.swift */,
+				8D1A66AA2631D7C500874965 /* GradeTableViewCell.xib */,
 			);
 			path = EducationalAdminSystem;
 			sourceTree = "<group>";
@@ -184,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D1A66AC2631D7C500874965 /* GradeTableViewCell.xib in Resources */,
 				8D2C5FF626307805003F60F7 /* LaunchScreen.storyboard in Resources */,
 				8D2C60002630787D003F60F7 /* GoogleService-Info.plist in Resources */,
 				8D2C5FF326307805003F60F7 /* Assets.xcassets in Resources */,
@@ -240,13 +264,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D1A66A72631D7AF00874965 /* GradeViewController.swift in Sources */,
+				8D1A66A026318B7600874965 /* CourseModel.swift in Sources */,
 				8D2C5FEE26307803003F60F7 /* ViewController.swift in Sources */,
 				8D2C5FEA26307803003F60F7 /* AppDelegate.swift in Sources */,
 				8D2C602326307C82003F60F7 /* DashboardViewController.swift in Sources */,
-				8D7DA26526316BEC001F25B3 /* GradeTableViewController.swift in Sources */,
+				8D1A66AB2631D7C500874965 /* GradeTableViewCell.swift in Sources */,
 				8D2C602026307B1B003F60F7 /* Utilities.swift in Sources */,
+				8D1A66A326318B8300874965 /* GradeModel.swift in Sources */,
 				8D7DA261263168A0001F25B3 /* Constants.swift in Sources */,
 				8D2C5FEC26307803003F60F7 /* SceneDelegate.swift in Sources */,
+				8D1A669D26318B6400874965 /* EventsModel.swift in Sources */,
 				8D2C602626308048003F60F7 /* KeychainService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
