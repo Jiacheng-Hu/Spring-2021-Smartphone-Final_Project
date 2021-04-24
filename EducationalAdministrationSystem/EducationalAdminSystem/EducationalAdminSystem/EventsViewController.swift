@@ -39,6 +39,15 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "EventsItemViewController") as? EventsItemViewController
+        vc?.titles = eventsArr[indexPath.row].title
+        vc?.time = eventsArr[indexPath.row].displayTime
+        vc?.text = eventsArr[indexPath.row].text
+        vc?.dept = eventsArr[indexPath.row].department
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     func getEventsData(_ url: String) {
         SwiftSpinner.show("Getting events...")
         AF.request(url).responseJSON { response in
@@ -47,6 +56,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 print("Error in getting events data")
                 return
             }
+            self.eventsArr = [EventsModel]()
             guard let data = response.data else {return}
             let eventsJson: [JSON] = JSON(data).arrayValue
             for index in eventsJson {
