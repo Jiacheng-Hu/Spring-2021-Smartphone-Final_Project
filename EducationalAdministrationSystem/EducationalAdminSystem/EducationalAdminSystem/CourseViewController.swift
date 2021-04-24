@@ -40,6 +40,18 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "CourseItemViewController") as? CourseItemViewController
+        vc?.crnTitle = "\(courseArr[indexPath.row].crn): \(courseArr[indexPath.row].title)"
+        vc?.subject = "Subject: \(courseArr[indexPath.row].subject)"
+        vc?.credit = "Credit: \(courseArr[indexPath.row].credit)"
+        vc?.term = "Term: \(courseArr[indexPath.row].associatedTerm)"
+        vc?.lecturer = "Lecturer: \(courseArr[indexPath.row].lecturer)"
+        vc?.schedule = "Schedule: \(courseArr[indexPath.row].schedule)"
+        vc?.courseDescription = "Description: \(courseArr[indexPath.row].description)"
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     func getCourseData(_ url: String) {
         SwiftSpinner.show("Getting course...")
         courseArr = [CourseModel]()
