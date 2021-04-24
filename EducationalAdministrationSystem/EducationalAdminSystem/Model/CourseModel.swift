@@ -9,7 +9,7 @@ import Foundation
 
 class CourseModel {
     
-    var crn: Int
+    var crn: String
     var title: String
     var subject: String
     var credit: Int
@@ -18,7 +18,7 @@ class CourseModel {
     var description: String
     var schedule: String
     
-    init(_ crn: Int, _ title: String, _ subject: String, _ credit: Int, _ associatedTerm: String, _ lecturer: String, _ description: String, _ schedule: String) {
+    init(_ crn: String, _ title: String, _ subject: String, _ credit: Int, _ associatedTerm: String, _ lecturer: String, _ description: String, _ schedule: String) {
         self.crn = crn
         self.title = title
         self.subject = subject

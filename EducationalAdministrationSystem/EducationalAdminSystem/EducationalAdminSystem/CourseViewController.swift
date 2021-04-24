@@ -42,6 +42,8 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "CourseItemViewController") as? CourseItemViewController
+        vc?.crn = courseArr[indexPath.row].crn
+        vc?.courseTitle = courseArr[indexPath.row].title
         vc?.crnTitle = "\(courseArr[indexPath.row].crn): \(courseArr[indexPath.row].title)"
         vc?.subject = "Subject: \(courseArr[indexPath.row].subject)"
         vc?.credit = "Credit: \(courseArr[indexPath.row].credit)"
@@ -64,7 +66,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             guard let data = response.data else {return}
             let courseJson: [JSON] = JSON(data).arrayValue
             for index in courseJson {
-                let crn = index["crn"].intValue
+                let crn = index["crn"].stringValue
                 let title = index["title"].stringValue
                 let subject = index["subject"].stringValue
                 let credit = index["credit"].intValue

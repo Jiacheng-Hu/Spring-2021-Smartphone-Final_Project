@@ -775,12 +775,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fht-oh-ETg" userLabel="lblDept">
-                                <rect key="frame" x="10" y="714" width="408" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fht-oh-ETg" userLabel="lblDept">
+                                <rect key="frame" x="10" y="714" width="408" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="dMQ-jy-Oxd"/>
+                                    <constraint firstAttribute="height" constant="100" id="Gye-11-7g6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
