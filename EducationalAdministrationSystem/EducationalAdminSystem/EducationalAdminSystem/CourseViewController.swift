@@ -42,8 +42,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "CourseItemViewController") as? CourseItemViewController
-        vc?.crn = courseArr[indexPath.row].crn
-        vc?.courseTitle = courseArr[indexPath.row].title
         vc?.crnTitle = "\(courseArr[indexPath.row].crn): \(courseArr[indexPath.row].title)"
         vc?.subject = "Subject: \(courseArr[indexPath.row].subject)"
         vc?.credit = "Credit: \(courseArr[indexPath.row].credit)"
@@ -51,6 +49,16 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         vc?.lecturer = "Lecturer: \(courseArr[indexPath.row].lecturer)"
         vc?.schedule = "Schedule: \(courseArr[indexPath.row].schedule)"
         vc?.courseDescription = "Description: \(courseArr[indexPath.row].description)"
+        
+        vc?.dbCRN = courseArr[indexPath.row].crn
+        vc?.dbTitle = courseArr[indexPath.row].title
+        vc?.dbSubject = courseArr[indexPath.row].subject
+        vc?.dbCredit = courseArr[indexPath.row].credit
+        vc?.dbTerm = courseArr[indexPath.row].associatedTerm
+        vc?.dbLecturer = courseArr[indexPath.row].lecturer
+        vc?.dbSchedule = courseArr[indexPath.row].schedule
+        vc?.dbCourseDescription = courseArr[indexPath.row].description
+        
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     

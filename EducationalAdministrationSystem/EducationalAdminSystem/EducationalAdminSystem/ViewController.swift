@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import SwiftSpinner
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var imgLogo: UIImageView!
     @IBOutlet weak var txtEmail: UITextField!
@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         imgLogo.image = UIImage(named: "logo")
         lblStatus.text = ""
+        txtEmail.delegate = self
+        txtPassword.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     override func viewDidAppear(_ animated: Bool) {

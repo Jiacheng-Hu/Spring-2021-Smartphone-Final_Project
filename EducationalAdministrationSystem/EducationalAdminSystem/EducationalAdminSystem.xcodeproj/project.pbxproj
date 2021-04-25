@@ -32,6 +32,10 @@
 		8D9869E02633B0E800B5FBD8 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9869DE2633B0E800B5FBD8 /* CourseTableViewCell.swift */; };
 		8D9869E12633B0E800B5FBD8 /* CourseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9869DF2633B0E800B5FBD8 /* CourseTableViewCell.xib */; };
 		8D9869E42633B80000B5FBD8 /* CourseItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9869E32633B80000B5FBD8 /* CourseItemViewController.swift */; };
+		8D986A042635157A00B5FBD8 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D986A032635157A00B5FBD8 /* ScheduleViewController.swift */; };
+		8D986A0726351AF200B5FBD8 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D986A0626351AF200B5FBD8 /* ScheduleTableViewController.swift */; };
+		8D986A0B26351B0500B5FBD8 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D986A0926351B0500B5FBD8 /* ScheduleTableViewCell.swift */; };
+		8D986A0C26351B0500B5FBD8 /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D986A0A26351B0500B5FBD8 /* ScheduleTableViewCell.xib */; };
 		D3EA16BB83EECDDCD0F66D59 /* Pods_EducationalAdminSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FDAEA13004A003F0923C185 /* Pods_EducationalAdminSystem.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +67,10 @@
 		8D9869DE2633B0E800B5FBD8 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		8D9869DF2633B0E800B5FBD8 /* CourseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseTableViewCell.xib; sourceTree = "<group>"; };
 		8D9869E32633B80000B5FBD8 /* CourseItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemViewController.swift; sourceTree = "<group>"; };
+		8D986A032635157A00B5FBD8 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		8D986A0626351AF200B5FBD8 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
+		8D986A0926351B0500B5FBD8 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		8D986A0A26351B0500B5FBD8 /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		9FDAEA13004A003F0923C185 /* Pods_EducationalAdminSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EducationalAdminSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84BD8D4F66AC1E441D61974 /* Pods-EducationalAdminSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationalAdminSystem.release.xcconfig"; path = "Target Support Files/Pods-EducationalAdminSystem/Pods-EducationalAdminSystem.release.xcconfig"; sourceTree = "<group>"; };
 		E0E34052C1C44E3E74553BE0 /* Pods-EducationalAdminSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationalAdminSystem.debug.xcconfig"; path = "Target Support Files/Pods-EducationalAdminSystem/Pods-EducationalAdminSystem.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +159,10 @@
 				8D9869DE2633B0E800B5FBD8 /* CourseTableViewCell.swift */,
 				8D9869DF2633B0E800B5FBD8 /* CourseTableViewCell.xib */,
 				8D9869E32633B80000B5FBD8 /* CourseItemViewController.swift */,
+				8D986A032635157A00B5FBD8 /* ScheduleViewController.swift */,
+				8D986A0626351AF200B5FBD8 /* ScheduleTableViewController.swift */,
+				8D986A0926351B0500B5FBD8 /* ScheduleTableViewCell.swift */,
+				8D986A0A26351B0500B5FBD8 /* ScheduleTableViewCell.xib */,
 			);
 			path = EducationalAdminSystem;
 			sourceTree = "<group>";
@@ -233,6 +245,7 @@
 			files = (
 				8D1A66AC2631D7C500874965 /* GradeTableViewCell.xib in Resources */,
 				8D2C5FF626307805003F60F7 /* LaunchScreen.storyboard in Resources */,
+				8D986A0C26351B0500B5FBD8 /* ScheduleTableViewCell.xib in Resources */,
 				8D9869D6263330D500B5FBD8 /* EventsTableViewCell.xib in Resources */,
 				8D2C60002630787D003F60F7 /* GoogleService-Info.plist in Resources */,
 				8D9869E12633B0E800B5FBD8 /* CourseTableViewCell.xib in Resources */,
@@ -298,13 +311,16 @@
 				8D2C602326307C82003F60F7 /* DashboardViewController.swift in Sources */,
 				8D9869DC2633B05800B5FBD8 /* CourseViewController.swift in Sources */,
 				8D1A66AB2631D7C500874965 /* GradeTableViewCell.swift in Sources */,
+				8D986A0B26351B0500B5FBD8 /* ScheduleTableViewCell.swift in Sources */,
 				8D2C602026307B1B003F60F7 /* Utilities.swift in Sources */,
 				8D9869D12633307100B5FBD8 /* EventsViewController.swift in Sources */,
 				8D9869D5263330D500B5FBD8 /* EventsTableViewCell.swift in Sources */,
+				8D986A042635157A00B5FBD8 /* ScheduleViewController.swift in Sources */,
 				8D1A66A326318B8300874965 /* GradeModel.swift in Sources */,
 				8D9869E42633B80000B5FBD8 /* CourseItemViewController.swift in Sources */,
 				8D7DA261263168A0001F25B3 /* Constants.swift in Sources */,
 				8D2C5FEC26307803003F60F7 /* SceneDelegate.swift in Sources */,
+				8D986A0726351AF200B5FBD8 /* ScheduleTableViewController.swift in Sources */,
 				8D1A669D26318B6400874965 /* EventsModel.swift in Sources */,
 				8D9869D92633396E00B5FBD8 /* EventsItemViewController.swift in Sources */,
 				8D2C602626308048003F60F7 /* KeychainService.swift in Sources */,
@@ -456,6 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VJUZY8YA3N;
 				INFOPLIST_FILE = EducationalAdminSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,6 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VJUZY8YA3N;
 				INFOPLIST_FILE = EducationalAdminSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

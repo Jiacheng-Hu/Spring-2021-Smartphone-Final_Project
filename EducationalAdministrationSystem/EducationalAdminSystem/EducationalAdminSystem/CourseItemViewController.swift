@@ -18,8 +18,6 @@ class CourseItemViewController: UIViewController {
     @IBOutlet weak var lblSchedule: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     
-    var crn = ""
-    var courseTitle = ""
     var crnTitle = ""
     var subject = ""
     var credit = ""
@@ -27,6 +25,15 @@ class CourseItemViewController: UIViewController {
     var lecturer = ""
     var schedule = ""
     var courseDescription = ""
+    
+    var dbCRN = ""
+    var dbTitle = ""
+    var dbSubject = ""
+    var dbCredit = 0
+    var dbTerm = ""
+    var dbLecturer = ""
+    var dbSchedule = ""
+    var dbCourseDescription = ""
     
     var db: Firestore!
     
@@ -46,52 +53,20 @@ class CourseItemViewController: UIViewController {
     }
     
     @IBAction func registerAction(_ sender: UIButton) {
-        if didExistInDB(crn) {
-            let alert = UIAlertController(title: "Course Registration", message: "You have registered this course", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in
-                return
-            }
-            alert.addAction(ok)
-            self.present(alert, animated: true, completion: nil)
-        } else {
-            addDataToDB(crn)
-        }
-        
-//        let alert = UIAlertController(title: "Course Registration", message: "Test", preferredStyle: .alert)
-//        let ok = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in
-//            return
-//        }
-//        alert.addAction(ok)
-//        self.present(alert, animated: true, completion: nil)
+        addDataToDB(dbCRN)
     }
-    
-    func didExistInDB(_ crn: String) -> Bool {
-        let docRef = db.collection("courses").document(crn)
-        var temp = false
-        docRef.getDocument { (document, error) in
-            if error != nil {
-                print("Error in getting access in database")
-                return
-            }
-            if let document = document, document.exists {
-                temp = true
-            } else {
-                temp = false
-            }
-        }
-        return temp
-    }
+
     
     func addDataToDB(_ crn: String) {
         db.collection("courses").document(crn).setData([
-            "crn": crn,
-            "title": courseTitle,
-            "subject": subject,
-            "credit": credit,
-            "term": term,
-            "lecturer": lecturer,
-            "schedule": schedule,
-            "description": courseDescription
+            "crn": dbCRN,
+            "title": dbTitle,
+            "subject": dbSubject,
+            "credit": dbCredit,
+            "term": dbTerm,
+            "lecturer": dbLecturer,
+            "schedule": dbSchedule,
+            "description": dbCourseDescription
         ]) {error in
             if let error = error {
                 print("Error in writing documents: \(error)")

@@ -674,30 +674,93 @@
         <!--Schedule-->
         <scene sceneID="Nyh-0N-65F">
             <objects>
-                <viewController id="5TK-XM-Xbl" sceneMemberID="viewController">
+                <viewController id="5TK-XM-Xbl" customClass="ScheduleViewController" customModule="EducationalAdminSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GmI-u4-xSL">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkL-6i-aHw">
-                                <rect key="frame" x="133.66666666666669" y="448" width="160.66666666666669" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bw5-8N-m8l">
+                                <rect key="frame" x="49.666666666666657" y="444" width="329" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Click here to check course schedule"/>
+                                <connections>
+                                    <action selector="checkCourseAction:" destination="5TK-XM-Xbl" eventType="touchUpInside" id="RKB-3z-ckn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dEM-Sl-5fv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UkL-6i-aHw" firstAttribute="centerX" secondItem="GmI-u4-xSL" secondAttribute="centerX" id="iRW-4K-YX1"/>
-                            <constraint firstItem="UkL-6i-aHw" firstAttribute="centerY" secondItem="GmI-u4-xSL" secondAttribute="centerY" id="rOw-Iq-LPH"/>
+                            <constraint firstItem="bw5-8N-m8l" firstAttribute="centerX" secondItem="GmI-u4-xSL" secondAttribute="centerX" id="8xf-cF-Udm"/>
+                            <constraint firstItem="bw5-8N-m8l" firstAttribute="centerY" secondItem="GmI-u4-xSL" secondAttribute="centerY" id="smT-wZ-zZI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule" id="Clx-vk-qzN"/>
+                    <connections>
+                        <segue destination="14G-xu-9pZ" kind="show" identifier="emptySegue" id="g1T-o6-2l3"/>
+                        <segue destination="wnI-OY-jrI" kind="show" identifier="getCourseSegue" id="sHr-ZK-6Bw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVK-Wc-Ynm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2082" y="924"/>
+        </scene>
+        <!--Schedule Table View Controller-->
+        <scene sceneID="cPb-Dv-Lny">
+            <objects>
+                <tableViewController id="wnI-OY-jrI" customClass="ScheduleTableViewController" customModule="EducationalAdminSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Ac-Np-lqv">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SCA-jS-Xm1">
+                                <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SCA-jS-Xm1" id="79W-bz-IQk">
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wnI-OY-jrI" id="awJ-Kn-bip"/>
+                            <outlet property="delegate" destination="wnI-OY-jrI" id="RIP-OS-2tU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="PP1-25-kd7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAX-RG-rEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2082" y="1679"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4qM-6y-fZT">
+            <objects>
+                <viewController id="14G-xu-9pZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="agC-gR-RMR">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry! No course registered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMS-X9-dEY">
+                                <rect key="frame" x="84" y="450" width="260.33333333333331" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uqv-Da-8Nb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CMS-X9-dEY" firstAttribute="centerX" secondItem="agC-gR-RMR" secondAttribute="centerX" id="AsA-AY-kA7"/>
+                            <constraint firstItem="CMS-X9-dEY" firstAttribute="centerY" secondItem="agC-gR-RMR" secondAttribute="centerY" id="OcB-ze-FpO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HI0-xC-v23"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFL-yK-Ktv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3059" y="924"/>
         </scene>
         <!--Events-->
         <scene sceneID="Wn0-x7-jG0">
